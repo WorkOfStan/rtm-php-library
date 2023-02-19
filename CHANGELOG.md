@@ -23,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### `Changed`
 - PSR-4 ready, i.e. the library can be linked by composer
-- API calls changed from http to https and GET to POST
+- API calls changed from HTTP to HTTPS and GET to POST
 
 ### `Deprecated`
 
@@ -36,7 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.1] - 2012-04-22
 - Auth flow now works through and through (using class `get` method for getToken)
-- TODO: create a wrapper for every RTM API method, each class/rtm api method will wrap around basic `get` method and handle each accordingly
+- TODO: create a wrapper for every RTM API method, each class/rtm API method will wrap around basic `get` method and handle each accordingly
 
 [Unreleased]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.1...HEAD
 [0.1]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.0.1...v0.1

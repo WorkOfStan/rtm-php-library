@@ -35,5 +35,5 @@ namespace WorkOfStan\LembreSeDoLeite;
 
 class RtmApiError extends \Exception
 {
-
+    //
 }
