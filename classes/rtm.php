@@ -35,7 +35,6 @@ namespace WorkOfStan\LembreSeDoLeite;
 
 class RTM
 {
-
     /** @var string */
     private $authUrl = 'https://www.rememberthemilk.com/services/auth/';
 

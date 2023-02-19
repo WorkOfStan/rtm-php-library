@@ -2,6 +2,8 @@
 
 /**
  * This is a specimen content of config.local.php:
+ *
+ * So far, only for automatic tests (that include config testing)
  */
 
 /**
@@ -24,4 +26,3 @@
  * Meaning that creating item and adding inventory leads to a fail, fix by harmonising the timezones:
  */
 //date_default_timezone_set('Europe/Prague');
-
