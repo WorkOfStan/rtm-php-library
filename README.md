@@ -1,13 +1,13 @@
-#Remember The Milk
+# Remember The Milk
 *A PHP Library*
 
-##Description
-**Author**: Adam Magaña &lt;adammagana@gmail.com&gt;  
-**Last Edit**: April 18th, 2012  
+## Description
+**Author**: Adam Magaña &lt;adammagana@gmail.com&gt;
+**Last Edit**: April 18th, 2012
 **Version**: 0.0.1
 
-##Usage
-###Constructor
+## Usage
+### Constructor
 ```php
 <?php
     require('rtm.php');
@@ -47,13 +47,13 @@
     </tr>
 </table>
 
-###Generate Authentication URL
+### Generate Authentication URL
 ```php
 <?php $authUrl = $rtm->getAuthUrl(); ?>
 ```
 The value of `$authUrl` will be a RTM formatted authentication URL containing your API Key, permission level, response format, and signature.
 
-##License 
+## License
 
 (The MIT License)
 

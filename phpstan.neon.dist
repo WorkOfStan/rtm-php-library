@@ -1,0 +1,2 @@
+includes:
+      - conf/phpstan.app.neon
