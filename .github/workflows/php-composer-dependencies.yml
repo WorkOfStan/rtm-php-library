@@ -18,4 +18,5 @@ jobs:
     uses: WorkOfStan/MyCMS/.github/workflows/php-composer-dependencies-reusable.yml@main
     with:
       # JSON
-      php-version: '["5.3", "5.6", "7.0", "7.1", "7.2", "7.3", "7.4"]'
+      php-version: '["5.3", "5.6", "7.0", "7.2", "7.3", "7.4"]'
+      # Note: 7.1 fails with PHP Fatal error:  Access level to PHPStan\Type\IntegerRangeType::__construct() must be public (as in class PHPStan\Type\IntegerType) in phar:///usr/local/bin/phpstan/src/Type/IntegerRangeType.php on line 23
