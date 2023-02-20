@@ -1,0 +1,22 @@
+---
+name: PHP Composer + PHPUnit + PHPStan
+
+on:
+  push:
+    branches-ignore:
+      # notest branches to ignore testing of partial online commits
+      - 'notest/**'
+
+  pull_request:
+    branches-ignore:
+      # notest branches to ignore testing of partial online commits
+      - 'notest/**'
+
+jobs:
+  # Note: https://docs.github.com/en/actions/using-workflows/reusing-workflows The strategy property is not supported in any job that calls a reusable workflow.
+  call-workflow:
+    uses: WorkOfStan/MyCMS/.github/workflows/php-composer-dependencies-reusable.yml@main
+    with:
+      # JSON
+      php-version: '["5.3", "5.6", "7.0", "7.2", "7.3", "7.4"]'
+      # Note: 7.1 fails with PHP Fatal error:  Access level to PHPStan\Type\IntegerRangeType::__construct() must be public (as in class PHPStan\Type\IntegerType) in phar:///usr/local/bin/phpstan/src/Type/IntegerRangeType.php on line 23

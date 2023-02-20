@@ -1,0 +1,32 @@
+---
+###########################
+###########################
+## Linter GitHub Actions ##
+###########################
+###########################
+name: Lint Code Base
+
+#
+# Documentation:
+# https://help.github.com/en/articles/workflow-syntax-for-github-actions
+#
+
+#############################
+# Start the job on all push #
+#############################
+on:
+  push:
+    branches-ignore:
+      # notest branches to ignore testing of partial online commits
+      - 'notest/**'
+  pull_request:
+    branches-ignore:
+      # notest branches to ignore testing of partial online commits
+      - 'notest/**'
+
+###############
+# Set the Job #
+###############
+jobs:
+  call-workflow:
+    uses: WorkOfStan/MyCMS/.github/workflows/linter.yml@main

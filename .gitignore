@@ -1,4 +1,18 @@
+#disable temporary and log files and dirs
 __init__.py
 .DS_Store
+/.php_cs.cache
+/.php-cs-fixer.cache
 
-index.php
+#disable private local files
+*.local.php
+*.local.yml
+
+#disable npm & composer-managed libraries
+/vendor/
+#disable composer lock file
+/composer.lock
+
+#disable IDE files
+/nbproject/
+/.idea/
