@@ -7,11 +7,21 @@
 **Version**: 0.0.1
 
 ## Usage
+### Composer.json
+```json
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/WorkOfStan/rtm-php-library" }
+    ],
+    "require": {
+        "workofstan/lembre-se-do-leite": "^0.1",
+```
+
 ### Constructor
 ```php
 <?php
-    require('rtm.php');
-    $rtm = new RTM(APP_KEY, APP_SECRET, PERMISSIONS, FORMAT);
+require_once __DIR__ . '/vendor/autoload.php';
+use WorkOfStan\LembreSeDoLeite\RTM;
+$rtm = new RTM(APP_KEY, APP_SECRET, PERMISSIONS, FORMAT);
 ?>
 ```
 <table>
@@ -52,6 +62,10 @@
 <?php $authUrl = $rtm->getAuthUrl(); ?>
 ```
 The value of `$authUrl` will be a RTM formatted authentication URL containing your API Key, permission level, response format, and signature.
+
+## Development
+- [phpstan.sh](./phpstan.sh) tests the code by the PHPStan
+- [phpstan-remove.sh](./phpstan-remove.sh) removes the PHPStan reference from composer.json
 
 ## License
 
