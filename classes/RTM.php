@@ -162,7 +162,7 @@ class RTM
     public function get($method, array $params = array())
     {
         if (empty($method)) {
-            throw new RtmApiError('Error: API Method must be defined.');
+            throw new RtmApiException('Error: API Method must be defined.');
         }
 
         // Append method to params for encoding the url params
