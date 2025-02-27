@@ -41,7 +41,7 @@ class RTM
     private $appSecret;
     /** @var string */
     private $authUrl = 'https://www.rememberthemilk.com/services/auth/';
-    /** @var string */
+    /** @var non-empty-string */
     private $baseUrl = 'https://api.rememberthemilk.com/services/rest/';
     /** @var string */
     private $format;
@@ -148,8 +148,7 @@ class RTM
         if (!empty($frob)) {
             $params['frob'] = $frob;
         }
-        $url = $this->authUrl . $this->encodeUrlParams($params, true, false);
-        return $url;
+        return $this->authUrl . $this->encodeUrlParams($params, true, false);
     }
 
     /**
@@ -174,14 +173,14 @@ class RTM
         $c = curl_init();
         $postFields = $this->encodeUrlParams($params, $method <> 'rtm.test.echo');
         curl_setopt($c, CURLOPT_URL, $this->baseUrl);
-        curl_setopt($c, CURLOPT_POST, 1);
+        curl_setopt($c, CURLOPT_POST, true);
         curl_setopt($c, CURLOPT_POSTFIELDS, $postFields);
         curl_setopt($c, CURLOPT_RETURNTRANSFER, true); // return the payload
 
         //SSL
         curl_setopt($c, CURLOPT_SSL_VERIFYPEER, false);
         //@todo try without that option and if it fails, it may try with this option and inform about it
-        curl_setopt($c, CURLOPT_SSL_VERIFYHOST, false); // accepts also private SSL certificates
+        curl_setopt($c, CURLOPT_SSL_VERIFYHOST, 0); // accepts also private SSL certificates
 
         $response = curl_exec($c);
         if (is_bool($response)) {
