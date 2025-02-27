@@ -36,22 +36,17 @@ namespace WorkOfStan\LembreSeDoLeite;
 class RTM
 {
     /** @var string */
-    private $authUrl = 'https://www.rememberthemilk.com/services/auth/';
-
-    /** @var string */
-    private $baseUrl = 'https://api.rememberthemilk.com/services/rest/';
-
-    /** @var string */
     private $appKey;
-
     /** @var string */
     private $appSecret;
-
     /** @var string */
-    private $permissions;
-
+    private $authUrl = 'https://www.rememberthemilk.com/services/auth/';
+    /** @var string */
+    private $baseUrl = 'https://api.rememberthemilk.com/services/rest/';
     /** @var string */
     private $format;
+    /** @var string */
+    private $permissions;
 
     /**
      * CONSTRUCTOR
@@ -60,12 +55,12 @@ class RTM
      * @param string $appSecret
      * @param string $permissions
      * @param string $format
-     * @throws RtmApiError
+     * @throws RtmApiException
      */
     public function __construct($appKey, $appSecret, $permissions = 'read', $format = 'json')
     {
         if (empty($appKey) || empty($appSecret)) {
-            throw new RtmApiError('Error: App Key and Secret Key must be defined.');
+            throw new RtmApiException('Error: App Key and Secret Key must be defined.');
         }
 
         $this->appKey = $appKey;
@@ -82,7 +77,7 @@ class RTM
      * @param bool $post Boolean specfying whether or not the URL should be get (or post which is default)
      * @return string Returns the URL encoded string of parameters
      */
-    private function encodeUrlParams(array $params = [], $signed = false, $post = true)
+    private function encodeUrlParams(array $params = array(), $signed = false, $post = true)
     {
         $paramString = '';
 
@@ -107,7 +102,7 @@ class RTM
                 $paramString .= $this->generateSig($params);
             }
         } else {
-            throw new RtmApiError('Error: There are no parameters to encode.');
+            throw new RtmApiException('Error: There are no parameters to encode.');
         }
 
         return $paramString;
@@ -119,7 +114,7 @@ class RTM
      * @param string[] $params The parameters used to generate the signature
      * @return string Returns the URL encoded authentication signature
      */
-    private function generateSig($params = array())
+    private function generateSig(array $params = array())
     {
         $params['format'] = $this->format;
 
@@ -164,7 +159,7 @@ class RTM
      * @param string[] $params Array of API parameters to accompany the method parameter
      * @return mixed Returns the reponse from the RTM API via POST request however
      */
-    public function get($method, $params = [])
+    public function get($method, array $params = array())
     {
         if (empty($method)) {
             throw new RtmApiError('Error: API Method must be defined.');
@@ -175,7 +170,6 @@ class RTM
         $params['api_key'] = $this->appKey;
         $params['v'] = '2'; // new version of API is preferred, it supports subtasks for Pro users
         //obsolete GET variant// $requestUrl = $this->baseUrl . $this->encodeUrlParams($params, true);
-
 
         $c = curl_init();
         $postFields = $this->encodeUrlParams($params, $method <> 'rtm.test.echo');
