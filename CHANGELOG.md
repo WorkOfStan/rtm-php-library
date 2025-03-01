@@ -7,15 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+TODO: use stable WorkOfStan/prettier-fix
+
 ### `Added` for new features
 
+- GitHub Actions for automated code linting
+- PHP/8.2-8.4 compatibility tests
+
 ### `Changed` for changes in existing functionality
+
+- code readability standardized by Prettier and PHPCS
 
 ### `Deprecated` for soon-to-be removed features
 
 ### `Removed` for now removed features
 
 ### `Fixed` for any bugfixes
+
+- backward PHP/5.3 compatibility
+- curl_setopt parameter values
 
 ### `Security` in case of vulnerabilities
 
