@@ -7,8 +7,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-TODO: use stable WorkOfStan/prettier-fix
-
 ### `Added` for new features
 
 - GitHub Actions for automated code linting
