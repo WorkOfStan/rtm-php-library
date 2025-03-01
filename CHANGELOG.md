@@ -17,6 +17,7 @@ TODO: use stable WorkOfStan/prettier-fix
 ### `Changed` for changes in existing functionality
 
 - code readability standardized by Prettier and PHPCS
+- the MIT LICENSE moved from README.md to a separate file as is standard
 
 ### `Deprecated` for soon-to-be removed features
 
