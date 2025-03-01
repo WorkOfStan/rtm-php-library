@@ -30,12 +30,12 @@ $rtm = new RTM(APP_KEY, APP_SECRET, PERMISSIONS, FORMAT);
 ?>
 ```
 
-| Parameter | Type | Default | Description |
-| --------- | ----- | ---- | ---- |
-| APP_KEY | string | none (required) | Your RTM application's public key. |
-| APP_SECRET | string | none (required) | Your RTM application's secret key. |
-| PERMISSIONS | string | read | The RTM permission level your application requests from a user. |
-| FORMAT | string | json | The RTM API response format. Value can be either 'json' or 'rest'. |
+| Parameter   | Type   | Default         | Description                                                        |
+| ----------- | ------ | --------------- | ------------------------------------------------------------------ |
+| APP_KEY     | string | none (required) | Your RTM application's public key.                                 |
+| APP_SECRET  | string | none (required) | Your RTM application's secret key.                                 |
+| PERMISSIONS | string | read            | The RTM permission level your application requests from a user.    |
+| FORMAT      | string | json            | The RTM API response format. Value can be either 'json' or 'rest'. |
 
 ### Generate Authentication URL
 
