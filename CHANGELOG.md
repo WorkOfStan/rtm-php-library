@@ -10,11 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### `Added` for new features
 
 - GitHub Actions for automated code linting
-- PHP/8.2-8.4 compatibility tests
+- support for PHP/8.2-8.4
 
 ### `Changed` for changes in existing functionality
 
-- code readability standardized by Prettier and PHPCS
+- code readability standardized with Prettier and PHPCS
 - the MIT LICENSE moved from README.md to a separate file as is standard
 
 ### `Deprecated` for soon-to-be removed features
