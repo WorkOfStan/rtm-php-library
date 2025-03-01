@@ -1,13 +1,21 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
 ### `Added` for new features
 
+- GitHub Actions for automated code linting
+- support for PHP/8.2-8.4
+
 ### `Changed` for changes in existing functionality
+
+- code readability standardized with Prettier and PHPCS
+- the MIT LICENSE moved from README.md to a separate file as is standard
 
 ### `Deprecated` for soon-to-be removed features
 
@@ -15,13 +23,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### `Fixed` for any bugfixes
 
+- backward PHP/5.3 compatibility
+- curl_setopt parameter values
+
 ### `Security` in case of vulnerabilities
 
 ## [0.1] - 2023-02-19
+
 ### `Added`
+
 - PHPStan level 9 automatic GitHub tests
 
 ### `Changed`
+
 - PSR-4 ready, i.e. the library can be linked by composer
 - API calls changed from HTTP to HTTPS and GET to POST
 
@@ -32,9 +46,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### `Fixed`
 
 ### `Security`
+
 - `.htaccess` restricts access to md files
 
 ## [0.0.1] - 2012-04-22
+
 - Auth flow now works through and through (using class `get` method for getToken)
 - TODO: create a wrapper for every RTM API method, each class/rtm API method will wrap around basic `get` method and handle each accordingly
 
