@@ -49,8 +49,6 @@ class RTM
     private $permissions;
 
     /**
-     * CONSTRUCTOR
-     *
      * @param string $appKey
      * @param string $appSecret
      * @param string $permissions
@@ -70,7 +68,7 @@ class RTM
     }
 
     /**
-     * Encodes request parameters into URL format
+     * Encodes request parameters into URL format.
      *
      * @param string[] $params Array of parameters to be URL encoded
      * @param bool $signed Boolean specfying whether or not the URL should be signed
@@ -109,7 +107,7 @@ class RTM
     }
 
     /**
-     * Generates a URL encoded authentication signature
+     * Generates a URL encoded authentication signature.
      *
      * @param string[] $params The parameters used to generate the signature
      * @return string Returns the URL encoded authentication signature
@@ -133,7 +131,7 @@ class RTM
     }
 
     /**
-     * Generates a RTM authentication URL
+     * Generates a RTM authentication URL.
      *
      * @param string $frob (optional) Temporary token to generate regular token
      * @see https://www.rememberthemilk.com/services/api/authentication.rtm
@@ -152,7 +150,7 @@ class RTM
     }
 
     /**
-     * Main method for making API calls
+     * Main method for making API calls.
      *
      * @param string $method Specifies what API method to be used
      * @param string[] $params Array of API parameters to accompany the method parameter
