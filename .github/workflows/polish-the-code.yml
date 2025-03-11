@@ -19,7 +19,7 @@ permissions:
 jobs:
   # Note: https://docs.github.com/en/actions/using-workflows/reusing-workflows The strategy property is not supported in any job that calls a reusable workflow.
   php-composer-unit-stan:
-    uses: WorkOfStan/seablast-actions/.github/workflows/php-composer-dependencies-reusable.yml@v0.2.2
+    uses: WorkOfStan/seablast-actions/.github/workflows/php-composer-dependencies-reusable.yml@v0.2.3
     with:
       # JSON
       php-version: '["5.3", "5.6", "7.0", "7.2", "7.3", "7.4", "8.2", "8.3", "8.4"]'
@@ -62,6 +62,6 @@ jobs:
 
   super-linter:
     needs: phpcs-phpcbf
-    uses: WorkOfStan/seablast-actions/.github/workflows/linter.yml@v0.2.2
+    uses: WorkOfStan/seablast-actions/.github/workflows/linter.yml@v0.2.3
     with:
       runs-on: "ubuntu-latest"
