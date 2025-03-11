@@ -4,12 +4,17 @@ on:
   push:
     branches-ignore:
       # notest branches to ignore testing of partial online commits
-      - 'notest/**'
+      - "notest/**"
   pull_request:
     branches-ignore:
       # notest branches to ignore testing of partial online commits
-      - 'notest/**'
+      - "notest/**"
+
+permissions:
+  contents: read
 
 jobs:
   call-workflow:
-    uses: WorkOfStan/MyCMS/.github/workflows/overtrue-phplint.yml@main
+    uses: WorkOfStan/seablast-actions/.github/workflows/overtrue-phplint.yml@v0.2.2
+    with:
+      runs-on: "ubuntu-latest"
