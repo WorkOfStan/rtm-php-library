@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
+namespace WorkOfStan\LembreSeDoLeite;
+
 /**
  * PHP Library - Remember The Milk
  *
  * @see http://www.rememberthemilk.com/services/api/
  */
-
-namespace WorkOfStan\LembreSeDoLeite;
-
 class RTM
 {
     /** @var string */
