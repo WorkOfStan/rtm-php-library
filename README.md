@@ -8,6 +8,8 @@ _A PHP Library_
 **Last Edit**: April 18th, 2012
 **Version**: 0.0.1
 
+@see <http://www.rememberthemilk.com/services/api/>
+
 ## Usage
 
 ### Composer.json
@@ -17,7 +19,7 @@ _A PHP Library_
         { "type": "vcs", "url": "https://github.com/WorkOfStan/rtm-php-library" }
     ],
     "require": {
-        "workofstan/lembre-se-do-leite": "^0.1",
+        "workofstan/lembre-se-do-leite": "^0.2",
 ```
 
 ### Constructor
@@ -47,5 +49,5 @@ The value of `$authUrl` will be a RTM formatted authentication URL containing yo
 
 ## Development
 
-- [phpstan.sh](./phpstan.sh) tests the code by the PHPStan
-- [phpstan-remove.sh](./phpstan-remove.sh) removes the PHPStan reference from composer.json
+- [./blast.sh phpstan](./blast.sh) tests the code by the PHPStan
+- [./blast.sh phpstan-remove](./blast.sh) removes the PHPStan reference from composer.json
