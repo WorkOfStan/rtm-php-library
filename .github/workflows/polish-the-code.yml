@@ -54,7 +54,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: Invoke the PHPCS check and PHPCBF fix
-        uses: WorkOfStan/phpcs-fix@v1.0.1
+        uses: WorkOfStan/phpcs-fix@v1.0.2
         with:
           commit-changes: true
           php-version: "7.4"
