@@ -15,6 +15,6 @@ permissions:
 
 jobs:
   call-workflow:
-    uses: WorkOfStan/seablast-actions/.github/workflows/overtrue-phplint.yml@v0.2.3
+    uses: WorkOfStan/seablast-actions/.github/workflows/overtrue-phplint.yml@v0.2.4
     with:
       runs-on: "ubuntu-latest"
