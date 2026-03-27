@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### `Security` in case of vulnerabilities
 
+## [0.3] - 2026-03-27
+
+chore: add test of PHP/8.5
+
 ## [0.2] - 2025-03-11
 
 chore: support for PHP/8.0-8.4
@@ -60,7 +64,8 @@ chore: support for PHP/8.0-8.4
 - Auth flow now works through and through (using class `get` method for getToken)
 - TODO: create a wrapper for every RTM API method, each class/rtm API method will wrap around basic `get` method and handle each accordingly
 
-[Unreleased]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.2...HEAD
+[Unreleased]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.3...HEAD
+[0.3]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.2...v0.3
 [0.2]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.1...v0.2
 [0.1]: https://github.com/WorkOfStan/rtm-php-library/compare/v0.0.1...v0.1
 [0.0.1]: https://github.com/WorkOfStan/rtm-php-library/releases/tag/v0.0.1

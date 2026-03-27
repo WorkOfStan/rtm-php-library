@@ -2,7 +2,6 @@ RewriteEngine on
 
 # Hide composer, logs
 # If mod_alias is not enabled, the Apache should fail to show anything in order to always hide the files in the section below
-#<IfModule mod_alias.c>
 RedirectMatch 404 /\.git
 RedirectMatch 404 \/cache\/
 RedirectMatch 404 \/classes\/
@@ -24,4 +23,5 @@ RedirectMatch 404 \.sass-cache$
 RedirectMatch 404 \.sh$
 RedirectMatch 404 \.stylelintignore$
 RedirectMatch 404 \.yml$
-#</IfModule>
+# hide all the files in any directory that have no filename but only an extension (like .prettierignore)
+RedirectMatch 404 /(\.[^.]+)$
